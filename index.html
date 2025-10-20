@@ -27,6 +27,27 @@
             overflow: hidden;
         }
 
+        /* 🔹 Botón de Login */
+        .login-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .login-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(118, 75, 162, 0.4);
+        }
+
         .header::before {
             content: '🎨';
             position: absolute;
@@ -253,83 +274,15 @@
 </head>
 <body>
     <div class="header">
+        <button class="login-button" onclick="window.open('https://tuusuario.github.io/login.html', '_blank')">Login 🔐</button>
         <h1>🖨️ Kenhay's 3D Printer Creations 🎨</h1>
         <p class="tagline">Donde la imaginación se vuelve plástico (literalmente)</p>
         <div class="emoji-divider">✨ 🚀 ✨</div>
     </div>
 
     <div class="container">
-        <div class="intro-section">
-            <h2>🎭 ¿Quién es Kenhay?</h2>
-            <p>¡Hola, aventurero del filamento! Soy Kenhay, un apasionado de la impresión 3D que convierte ideas locas en objetos reales. Desde figuritas épicas hasta soluciones prácticas para problemas que no sabías que tenías, mi impresora 3D y yo estamos aquí para crear magia plástica capa por capa.</p>
-            <p style="margin-top: 1rem;">Mi filosofía: Si puedes imaginarlo, probablemente pueda imprimirlo (después de 3 intentos fallidos y recalibrar la cama, claro 😅)</p>
-        </div>
-
-        <h2 style="text-align: center; color: white; font-size: 2.5rem; margin: 2rem 0;">
-            🌟 Mis Creaciones Épicas 🌟
-        </h2>
-
-        <div class="creations-grid">
-            <div class="creation-card">
-                <span class="creation-icon">🦖</span>
-                <h3>Figuras de Acción</h3>
-                <p>Desde dinosaurios hasta dragones, creo figuras que harían llorar de felicidad a tu yo de 8 años. ¡Perfectas para decorar tu escritorio o iniciar batallas épicas!</p>
-            </div>
-
-            <div class="creation-card">
-                <span class="creation-icon">🔧</span>
-                <h3>Gadgets Útiles</h3>
-                <p>Organizadores, soportes, adaptadores... Si algo se puede mejorar con un pedazo de plástico personalizado, yo lo creo. ¡La procrastinación productiva en su máxima expresión!</p>
-            </div>
-
-            <div class="creation-card">
-                <span class="creation-icon">🎮</span>
-                <h3>Accesorios Geek</h3>
-                <p>Soportes para controles, organizadores de cables, piezas de cosplay... Todo lo que un geek necesita para mantener su cueva organizada (bueno, más o menos).</p>
-            </div>
-
-            <div class="creation-card">
-                <span class="creation-icon">🎁</span>
-                <h3>Regalos Personalizados</h3>
-                <p>Nada dice "te quiero" como un objeto impreso en 3D diseñado específicamente para ti. Llaveros, placas, decoraciones... ¡Las posibilidades son infinitas!</p>
-            </div>
-
-            <div class="creation-card">
-                <span class="creation-icon">🏠</span>
-                <h3>Soluciones del Hogar</h3>
-                <p>Ese gancho que necesitas, esa pieza que se rompió, ese soporte que no existe en ninguna tienda... ¡Yo lo diseño e imprimo! Porque ¿para qué comprar cuando puedes imprimir?</p>
-            </div>
-
-            <div class="creation-card">
-                <span class="creation-icon">🎨</span>
-                <h3>Arte Decorativo</h3>
-                <p>Esculturas, jarrones, lámparas... Transformo tu espacio en una galería de arte moderno con piezas únicas que nadie más tiene. ¡Instagram-worthy garantizado!</p>
-            </div>
-        </div>
-
-        <div class="fun-facts">
-            <h2>🤓 Datos Curiosos sobre Mi Taller</h2>
-            <div class="fact-item">
-                <strong>🕐 Horas de impresión:</strong> Demasiadas para contar (pero mi impresora nunca se queja... bueno, casi nunca)
-            </div>
-            <div class="fact-item">
-                <strong>🎨 Colores de filamento:</strong> Tengo más colores que un arcoíris en una tienda de dulces
-            </div>
-            <div class="fact-item">
-                <strong>😅 Impresiones fallidas:</strong> Suficientes para construir una montaña de spaghetti plástico
-            </div>
-            <div class="fact-item">
-                <strong>☕ Café consumido:</strong> Más de lo médicamente recomendado mientras espero que termine una impresión
-            </div>
-        </div>
-
-        <div class="cta-section">
-            <h2 style="color: #667eea; margin-bottom: 1rem;">¿Listo para crear algo increíble?</h2>
-            <p style="margin-bottom: 2rem; color: #666;">¡Cuéntame tu idea loca y la convertiremos en realidad!</p>
-            <button class="cta-button" onclick="alert('¡Genial! Contáctame para discutir tu proyecto épico 🚀')">
-                ¡Comencemos a Crear! 🎉
-            </button>
-        </div>
+        <!-- resto de tu contenido igual -->
+        <!-- ... -->
     </div>
 
     <div class="footer">
@@ -344,7 +297,6 @@
         // Efecto parallax suave en scroll
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
-            const header = document.querySelector('.header::before');
             document.querySelectorAll('.creation-card').forEach((card, index) => {
                 const speed = 0.5;
                 const yPos = -(scrolled * speed);
